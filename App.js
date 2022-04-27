@@ -16,8 +16,7 @@ import DonationReceipt from './pages/DonationReceipt';
 import DonationForm from './pages/DonationForm'; 
 import Settings from './pages/Settings';
 import CreateReceipt from './pages/CreateReceipt';
-import WalletConnectProvider from "@walletconnect/react-native-dapp";
-import Web3 from "web3";
+
 import { newKitFromWeb3 } from "@celo/contractkit";
 import AppOnboarding from './pages/AppOnboarding';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -151,7 +150,7 @@ class App extends React.Component {
     const requestId = 'login';
     
     // A string that will be displayed to the user, indicating the DApp requesting access/signature
-    const dappName = 'Coperacha';
+    const dappName = 'FundHub';
     
     // The deeplink that the Celo Wallet will use to redirect the user back to the DApp with the appropriate payload.
     const callback = Linking.makeUrl('/my/path');
@@ -165,11 +164,11 @@ class App extends React.Component {
   
     try {
       // Wait for the Celo Wallet response
-      const dappkitResponse = await waitForAccountAuth(requestId);
-      console.log(dappkitResponse);
+      // const dappkitResponse = await waitForAccountAuth(requestId);
+      // console.log(dappkitResponse);
   
       // Set the default account to the account returned from the wallet
-      kit.defaultAccount = dappkitResponse.address;
+      kit.defaultAccount = "0xd916b7ffced87399fb2951fbcf949f4791ff699f"
   
       // Get the stable token contract
       const stableToken = await kit.contracts.getStableToken();
@@ -182,7 +181,7 @@ class App extends React.Component {
       // Convert from a big number to a string
       let cUSDBalance = balance.toString();
       
-      this.storeData(dappkitResponse.address, cUSDBalance);
+      this.storeData(kit.defaultAccount, cUSDBalance);
     }
     catch (e) {
       var exception = e.toString(); 

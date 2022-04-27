@@ -83,7 +83,8 @@ function DonationForm(props) {
 
     console.log("After requesttxsig");
     // Get the response from the Celo wallet
-    const dappkitResponse = await waitForSignedTxs(requestId);
+    const dappkitResponse =  waitForSignedTxs(requestId);
+    // const dappkitResponse = "0x095ea7b3000000000000000000000000b00978c38cc20d4ff58b1d2346919ad10888d5b2000000000000000000000000000000000000000000000003782dace9d900000";
     const tx = dappkitResponse.rawTxs[0];
 
     setLoading(true);

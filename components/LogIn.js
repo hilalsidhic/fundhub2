@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     color: '#2E3338',
-    fontFamily: 'proximanova_bold',
+    
   },
   createFundraiserButton: {
     marginTop: 40,
@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#35D07F"
   }, 
   fundraiserTextStyle: {
-    fontFamily: 'proximanova_bold',
     fontSize: 18, 
     color: '#FFFFFF'
   }

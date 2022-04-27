@@ -10,7 +10,7 @@
   "dependencies": {
     "@celo/connect": "^1.0.1",
     "@celo/contractkit": "^1.0.0",
-    "@celo/dappkit": "^1.0.0",
+    "@celo/dappkit": "^1.5.2",
     "@celo/identity": "^1.1.0",
     "@expo-google-fonts/dev": "^0.1.0",
     "@expo-google-fonts/inter": "^0.1.0",

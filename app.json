@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Coperacha",
-    "slug": "coperacha",
+    "name": "FundHub",
+    "slug": "FundHub",
     "privacy": "public",
     "platforms": [
       "ios",
@@ -12,7 +12,7 @@
     "icon": "./assets/icon.png",
     "scheme": "celodappkit",
     "splash": {
-      "image": "./assets/splash2.png",
+      "image": "./assets/logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

@@ -210,6 +210,7 @@ function CreateListing(props) {
 
     // Get the response from the Celo wallet
     const dappkitResponse = await waitForSignedTxs(requestId)
+    console.log(dappkitResponse)
     const tx = dappkitResponse.rawTxs[0]
     
     setLoading(true); 
