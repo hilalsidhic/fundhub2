@@ -16,6 +16,9 @@ import DonationReceipt from './pages/DonationReceipt';
 import DonationForm from './pages/DonationForm'; 
 import Settings from './pages/Settings';
 import CreateReceipt from './pages/CreateReceipt';
+import WalletConnectProvider from "@walletconnect/react-native-dapp";
+import Web3 from "web3";
+import { newKitFromWeb3 } from "@celo/contractkit";
 import AppOnboarding from './pages/AppOnboarding';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {   
@@ -152,7 +155,7 @@ class App extends React.Component {
     
     // The deeplink that the Celo Wallet will use to redirect the user back to the DApp with the appropriate payload.
     const callback = Linking.makeUrl('/my/path');
-    
+    console.log();
     // Ask the Celo Alfajores Wallet for user info
     requestAccountAddress({
       requestId,
